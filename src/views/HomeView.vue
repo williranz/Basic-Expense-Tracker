@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="chart">
+    <h3>Monthly Expense chart by Year</h3>
+    <ExpenseChart />
   </div>
-  <HomeContent />
+  <div class="table">
+    <h3>Expense table by Year</h3>
+    <ExpenseTable />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HomeContent from "@/components/HomeContent.vue"; // @ is an alias to /src
+import ExpenseChart from "@/components/chart/ExpenseChart.vue";
+import ExpenseTable from "@/components/table/ExpenseTable.vue";
 
 export default defineComponent({
   name: "HomeView",
   components: {
-    HomeContent,
+    ExpenseChart,
+    ExpenseTable,
   },
 });
 </script>

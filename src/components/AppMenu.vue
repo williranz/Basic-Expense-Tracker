@@ -24,14 +24,21 @@ header {
 }
 nav {
   margin-left: auto;
-
+  padding: 30px;
   ul {
     list-style: none;
   }
-
   ul li {
     display: inline-flex;
     margin-left: 1rem;
+  }
+  a {
+    font-weight: bold;
+    color: #ff8c00;
+
+    &.router-link-exact-active {
+      color: #1589ff;
+    }
   }
 }
 </style>
