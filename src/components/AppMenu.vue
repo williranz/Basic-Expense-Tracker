@@ -11,6 +11,7 @@
   </header>
 </template>
 
+<!--app menubar styling-->
 <style lang="less">
 header {
   display: flex;

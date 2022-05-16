@@ -1,7 +1,9 @@
 <script>
 import { defineComponent } from "vue";
 import { Line } from "vue3-chart-v2";
+import { chartData2021, chartData2020, chartData2019 } from "./ChartData";
 
+// define expense chart component with chart data year 2019, 2020, 2021 as datasource
 export default defineComponent({
   name: "ExpenseChart",
   extends: Line,
@@ -24,22 +26,22 @@ export default defineComponent({
         ],
         datasets: [
           {
-            label: "Year 2021",
+            label: "2021",
             borderColor: "#ff8c00",
             backgroundColor: "rgba(245, 178, 39, 0.48)",
-            data: [23, 40, 45, 56, 15, 32, 45, 80, 50, 34, 11, 70],
+            data: chartData2021,
           },
           {
-            label: "Year 2020",
+            label: "2020",
             borderColor: "#1589ff",
             backgroundColor: "rgba(39, 140, 245, 0.48)",
-            data: [40, 20, 32, 39, 10, 40, 39, 80, 40, 20, 12, 73],
+            data: chartData2020,
           },
           {
-            label: "Year 2019",
+            label: "2019",
             borderColor: "#f87979",
             backgroundColor: "rgba(255, 56, 96, 0.48)",
-            data: [27, 30, 20, 67, 36, 51, 35, 23, 53, 30, 17, 67],
+            data: chartData2019,
           },
         ],
       },
@@ -49,6 +51,9 @@ export default defineComponent({
             {
               ticks: {
                 beginAtZero: true,
+                callback: function (value) {
+                  return "$" + value;
+                },
               },
             },
           ],

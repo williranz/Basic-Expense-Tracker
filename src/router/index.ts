@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
+// app router for home and about page
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
