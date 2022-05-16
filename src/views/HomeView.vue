@@ -1,6 +1,6 @@
 <template>
   <div class="chart">
-    <h3>Monthly Expense chart by Year</h3>
+    <h3>Monthly Expense chart by Year (in SGD)</h3>
     <ExpenseChart />
   </div>
   <div class="table">
