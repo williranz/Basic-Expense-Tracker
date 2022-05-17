@@ -29,6 +29,7 @@ export default {
   name: "ExpenseTable",
   data() {
     return {
+      // define column properties
       columns: [
         {
           label: "Name",

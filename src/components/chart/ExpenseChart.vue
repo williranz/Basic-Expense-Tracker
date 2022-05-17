@@ -51,6 +51,7 @@ export default defineComponent({
             {
               ticks: {
                 beginAtZero: true,
+                // add $ sign in front of value
                 callback: function (value) {
                   return "$" + value;
                 },
