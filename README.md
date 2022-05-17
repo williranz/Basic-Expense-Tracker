@@ -1,5 +1,10 @@
 # basic-expense-tracker
 
+## Get Started
+```
+After cloning reposity go to ../basic-expense-tracker to run node.js command in terminal
+```
+
 ## Project setup
 ```
 npm install
@@ -15,9 +20,14 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### Run lints
 ```
 npm run lint
+```
+
+### Run lints and fixes files
+```
+npm run lint --fix
 ```
 
 ### Customize configuration
