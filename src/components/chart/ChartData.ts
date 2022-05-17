@@ -11,27 +11,22 @@ expenses.forEach((expense) => {
   const expenseYear = expenseDate.getFullYear();
   const expenseMonth = expenseDate.getMonth();
 
-  // iterate for every month (January to December)
-  for (let monthIndex = 0; monthIndex < 12; monthIndex++) {
-    if (expenseMonth == monthIndex) {
-      // sum up total expense based on current month iteration depending on expense year
-      switch (expenseYear) {
-        case 2019:
-          chartData2019[monthIndex] += expense.total;
-          break;
+  // sum up total expense based on current month iteration depending on expense year
+  switch (expenseYear) {
+    case 2019:
+      chartData2019[expenseMonth] += expense.total;
+      break;
 
-        case 2020:
-          chartData2020[monthIndex] += expense.total;
-          break;
+    case 2020:
+      chartData2020[expenseMonth] += expense.total;
+      break;
 
-        case 2021:
-          chartData2021[monthIndex] += expense.total;
-          break;
+    case 2021:
+      chartData2021[expenseMonth] += expense.total;
+      break;
 
-        default:
-          console.log("invalid year : " + expenseYear);
-      }
-    }
+    default:
+      console.log("invalid year : " + expenseYear);
   }
 });
 
